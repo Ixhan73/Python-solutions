@@ -1,0 +1,18 @@
+[
+    {
+        "description": "Coffee",
+        "amount": 5
+    },
+    {
+        "description": "Groceries",
+        "amount": 200
+    },
+    {
+        "description": "Transport",
+        "amount": 30
+    },
+    {
+        "description": "Rent",
+        "amount": 500
+    }
+]

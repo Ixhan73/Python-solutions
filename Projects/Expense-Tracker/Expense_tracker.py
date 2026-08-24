@@ -1,7 +1,28 @@
-expenses = []
-choices = ['\n1.Add new expense', '2.View expenses', '3.Total expenses', '4.Exit']
+import json
+
+
+choices = ['\n1.Add new expense', 
+           '2.View expenses', 
+           '3.Total expenses', 
+           '4.Exit']
+
+#========== LOADING THE DATA ====================
+
+def load_data():
+    try:
+        with open('expenses.json', 'r') as file:
+            return json.load(file)
+        
+    except FileNotFoundError:
+        return []
+
+
+expenses = load_data()
+
+#========= FOR ADDING EXPENSES ==================
 
 def add_expense(expenses):
+
     while True:
         expense = input("Enter expense: ").title()
         try:
@@ -21,8 +42,10 @@ def add_expense(expenses):
         print("\tInfo stored!")
         break
 
+#========== FOR VIEWING EXPENSES =================
 
 def view_expenses(expenses):
+
     if not expenses:
         print("You don't have any expenses yet.")
         return
@@ -30,17 +53,32 @@ def view_expenses(expenses):
     for i, expense in enumerate(expenses, start=1):
         print(f"{i}. {expense['description']} - ${expense['amount']}")
 
+#=========== FOR CALCULATING TOTAL ===============
 
 def total_expenses(expenses):
-    amount = 0
+    
+    
     if not expenses:
         print("You don't have any expenses yet.")
-    else:
-        for expense in expenses:
-            amount += expense['amount']
+        return
+    
+    amount = 0
 
-        print(f"Total amount: ${amount}")
+    for expense in expenses:
+        amount += expense['amount']
 
+    print(f"Total amount: ${amount}")
+
+#=========== FOR STORING IN A FILE ================
+
+def store_expenses(expenses):
+    with open('expenses.json', 'w') as file:
+            json.dump(expenses, file, indent=4)
+
+
+#===================================
+#|           MAIN LOOP             |
+#===================================
 
 while True:
     for choice in choices:
@@ -49,6 +87,7 @@ while True:
     user_choice = input("\nChoose 1-4: ")
     if user_choice == '1':
         add_expense(expenses)
+        store_expenses(expenses)
         
     elif user_choice == '2':
         view_expenses(expenses)
