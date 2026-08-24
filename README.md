@@ -6,7 +6,7 @@ The purpose of this repository is to document my progress in Python, strengthen 
 
 ## 📚 Contents
 
-This repository contains solutions from selected chapters of *Python Crash Course*
+This repository contains solutions from selected chapters of *Python Crash Course* along with some projects.
 
 Each chapter is kept in its own file or folder where appropriate.
 
@@ -50,7 +50,6 @@ PART II- PYTHON PROJECTS
 ## 📌 Note
 
 These are my own attempts at the exercises. The repository is primarily a learning log rather than a collection of perfect solutions.
-
 I may revisit earlier solutions as my understanding of Python improves.
 
 ## 🚀 Long-Term Direction
