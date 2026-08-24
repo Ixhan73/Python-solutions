@@ -13,7 +13,7 @@ def load_data():
         with open('expenses.json', 'r') as file:
             return json.load(file)
         
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 
