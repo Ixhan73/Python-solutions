@@ -27,13 +27,22 @@ Each chapter is kept in its own file or folder where appropriate.
 
 ## 📈 Progress
 
-* [x] Python basics
-* [x] Control flow
+PART I- PYTHON FUNDAMENTALS
+* [x] Variables and simple data types
+* [x] Lists and list manipulation
+* [x] Conditional statements
+* [x] Dictionaries
+* [x] User Input and while loops
 * [x] Functions
-* [x] Modules
-* [x] Classes & OOP
+* [x] Classes
 * [x] Files and exceptions
-* [x] Testing
+
+PART II- PYTHON PROJECTS
+* [x] Simple quiz game
+* [x] To-do list
+* [x] Bank account simulator
+* [x] Expense tracker
+* [ ] Contact Book
 
 
 > Progress will be updated as I work through the book.
