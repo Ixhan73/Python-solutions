@@ -1,8 +1,11 @@
+#============================= CREATE BANK ACCOUNT CLASS ===================
+
 class BankAccount():
     def __init__(self, owner, balance):
         self.owner = owner
         self.balance = balance
 
+    # DEPOSIT FUNCTION
     def deposit(self, deposit):
         if deposit > 0:
             self.balance += deposit
@@ -11,7 +14,7 @@ class BankAccount():
             print("Invalid amount!\n")
             return False
 
-
+    # WTIHDRAW FUNCTION
     def withdraw(self, withdraw):
         if withdraw <= 0:
             print("Invalid withdrawal amount!")
@@ -24,19 +27,21 @@ class BankAccount():
             print("There isn't enough money in your account")
             return False
 
-        
+    # VIEW BALANCE FUNCTION
     def show_balance(self):
         print("Current Balance: ", self.balance, '\n')
 
-
+#=============================================================================
 
 options = ['1.Deposit', '2.Withdraw', '3.Check Balance', '4.Exit']      
-
 owner = input("\nPlease enter your name: ")
-
 amount = int(input("Please enter your initial deposit: "))
 
+#=============================================================================
 
+#=============================================================================
+                            # MAIN CODE LOOP
+#=============================================================================
 account = BankAccount(owner, amount)
 
 while True:
@@ -66,4 +71,3 @@ while True:
 
     else:
         print("Invalid choice! Please enter from 1-4\n")
-        

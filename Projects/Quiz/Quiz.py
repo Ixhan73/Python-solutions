@@ -1,5 +1,7 @@
 import random
 
+                                #QUIZ QUESTIONS
+#===============================================================================
 quiz = [
     {
         "question": "Which type of language is Python?",
@@ -103,10 +105,13 @@ quiz = [
     }
 ]
 
+#========================================================================================
+
 random.shuffle(quiz)
 
 score = 0
 
+# ================================== MAIN QUIZ LOOP =====================================
 for question in quiz:
     print('\n', question.get('question'))
 
@@ -143,6 +148,8 @@ for question in quiz:
 
         break
 
+
+# ====== RESULTS WITH PERCENTAGE AND REVIEW =======
 percentage = (score/len(quiz))*100
 
 print("Total score: ", score , "/" , len(quiz))

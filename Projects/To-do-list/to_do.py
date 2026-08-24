@@ -1,3 +1,8 @@
+
+                                    #MAIN FUNCTIONS FOR THE PROGRAM
+#=============================================================================================================
+
+#====== TASK VIEWING FUNCTION ======
 def view_tasks(tasks):
     if tasks:
         print("\nYour tasks:\n")
@@ -8,6 +13,7 @@ def view_tasks(tasks):
         print("\nYou don't have any tasks.\n")
 
 
+#====== TASK ADDING FUNCTION ======
 def add_task(tasks):
     task_to_add = input("\nEnter the task you want to add: ")
     if task_to_add not in tasks:
@@ -26,6 +32,7 @@ def add_task(tasks):
             print("\nInvalid input!\n")
 
 
+#====== TASK REMOVING FUNCTION ======
 def remove_task(tasks):
     task_to_remove = input("\nEnter the task you want to remove: ")
     if task_to_remove in tasks:
@@ -34,12 +41,14 @@ def remove_task(tasks):
     else:
         print("\nTask doesn't exist!\n")
 
-
-
-
+#=============================================================================================================
 
 tasks = []
 options = ['1. Add Task', '2. Remove Task', '3. View Tasks', '4. Exit']
+
+#=============================================================================================================
+#___________________________________________________________________
+#________________________ MAIN PROGRAM LOOP ________________________
 
 print('='*30,'\n\tTO-DO LIST\n'+'='*30)
 
