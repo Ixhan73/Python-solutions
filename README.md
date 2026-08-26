@@ -6,7 +6,7 @@ The purpose of this repository is to document my progress in Python, strengthen 
 
 ## 📚 Contents
 
-This repository contains solutions from selected chapters of *Python Crash Course*
+This repository contains solutions from selected chapters of *Python Crash Course* along with some projects.
 
 Each chapter is kept in its own file or folder where appropriate.
 
@@ -27,13 +27,22 @@ Each chapter is kept in its own file or folder where appropriate.
 
 ## 📈 Progress
 
-* [x] Python basics
-* [x] Control flow
+PART I- PYTHON FUNDAMENTALS
+* [x] Variables and simple data types
+* [x] Lists and list manipulation
+* [x] Conditional statements
+* [x] Dictionaries
+* [x] User Input and while loops
 * [x] Functions
-* [x] Modules
-* [x] Classes & OOP
+* [x] Classes
 * [x] Files and exceptions
-* [x] Testing
+
+PART II- PYTHON PROJECTS
+* [x] Simple quiz game
+* [x] To-do list
+* [x] Bank account simulator
+* [x] Expense tracker
+* [ ] Contact Book
 
 
 > Progress will be updated as I work through the book.
@@ -41,7 +50,6 @@ Each chapter is kept in its own file or folder where appropriate.
 ## 📌 Note
 
 These are my own attempts at the exercises. The repository is primarily a learning log rather than a collection of perfect solutions.
-
 I may revisit earlier solutions as my understanding of Python improves.
 
 ## 🚀 Long-Term Direction
