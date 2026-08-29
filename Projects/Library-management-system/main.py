@@ -13,6 +13,8 @@ choices = ['\n1. Add book',
     '5. Return book',
     '6. Exit']
 
+
+#============ MAIN PROGRAM LOOP ============
 while True:
 
     print("="*40+"\n\tLIBRARY MANAGEMENT SYSTEM\n"+"="*40)
@@ -22,7 +24,7 @@ while True:
 
     user_choice = input("\nPlease choose from [1-6]: ")
 
-
+#------------------------------------------------------
     if user_choice == '1':
         title = input("\nEnter book title: ")
 
@@ -37,11 +39,11 @@ while True:
         library.add_book(book)
         st.save_books(library)
 
-
+#------------------------------------------------------
     elif user_choice == '2':
         library.view_books()
 
-
+#------------------------------------------------------
     elif user_choice == '3':
         title = input("\nEnter book title: ")
         book = library.get_book(title)
@@ -52,19 +54,19 @@ while True:
         else:
             print("\nBook is not available.")
 
-
+#------------------------------------------------------
     elif user_choice == '4':
         title = input("\nBook to be borrowed (Enter title): ")
         library.borrow_book(title)
         st.save_books(library)
 
-
+#------------------------------------------------------
     elif user_choice == '5':
         title = input("\nBook to be returned (Enter title): ")
         library.return_book(title)
         st.save_books(library)
 
-
+#------------------------------------------------------
     elif user_choice == '6':
         print("\n\tLibrary exited.")
         break
@@ -72,3 +74,4 @@ while True:
     else:
         print("\nInvalid choice.")
         continue
+#------------------------------------------------------

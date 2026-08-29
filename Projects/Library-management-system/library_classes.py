@@ -1,3 +1,5 @@
+
+#================= BOOK OBJECT ================
 class Book:
 
     def __init__(self, title, author, available='Yes'):
@@ -10,7 +12,7 @@ class Book:
         return f"\nTitle: {self.title.title()}\nAuthor: {self.author.title()}\nAvailable: {self.available}"
     
 
-
+#============== LIBRARY OBJECT ================
 class Library:
 
     def __init__(self):
@@ -18,6 +20,7 @@ class Library:
         self.books = []
 
 
+    #=== ADDING A BOOK
     def add_book(self, book):
         for existing_book in self.books:
             if existing_book.title.lower() == book.title.lower():
@@ -26,8 +29,8 @@ class Library:
 
         self.books.append(book)
         print(f'''\n\tAdded "{book.title}" to the library.''')
-
-
+#-------------------------------------------------------------
+    #=== VIEWING BOOKS
     def view_books(self):
         if not self.books:
             print("\nNo books in library.")
@@ -35,15 +38,16 @@ class Library:
 
         for book in self.books:
             print('\n',book)
-
-
+#-------------------------------------------------------------
+    #=== FINDING A BOOK
     def get_book(self, title):
         for book in self.books:
             if book.title.lower() == title.lower():
                 return book
 
         return None
-
+#-------------------------------------------------------------
+    #=== BORROWING A BOOK
     def borrow_book(self, title):
         book = self.get_book(title)
 
@@ -56,8 +60,8 @@ class Library:
 
         book.available = 'No'
         print("\nBook borrowed successfully.")
-
-
+#-------------------------------------------------------------
+    #=== RETURNING BORROWED BOOK
     def return_book(self, title):
         book = self.get_book(title)
 
@@ -70,3 +74,4 @@ class Library:
 
         book.available = 'Yes'
         print("\nBook returned successfully.")
+#-------------------------------------------------------------

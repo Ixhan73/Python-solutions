@@ -1,6 +1,6 @@
 from library_classes import Book
 import json
-
+#------------------------------------------------------
 def save_books(library):
     books = []
 
@@ -14,6 +14,7 @@ def save_books(library):
     with open('library.json', 'w') as file:
         json.dump(books, file, indent=4)
 
+#------------------------------------------------------
 def load_books():
     try:
         with open('library.json', 'r') as file:
@@ -33,3 +34,4 @@ def load_books():
 
     except (FileNotFoundError, json.JSONDecodeError):
         return []
+#------------------------------------------------------
