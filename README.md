@@ -42,7 +42,7 @@ PART II- PYTHON PROJECTS
 * [x] To-do list
 * [x] Bank account simulator
 * [x] Expense tracker
-* [ ] Contact Book
+* [x] Contact Book
 
 
 > Progress will be updated as I work through the book.
